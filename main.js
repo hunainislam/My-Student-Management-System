@@ -24,6 +24,12 @@ class Student {
     }
 }
 class Teacher extends Student {
+    email = "";
+    contact = "";
+    addInfo(email, contact) {
+        this.email = email;
+        this.contact = contact;
+    }
 }
 // School 
 let school1 = new School("Dar-ul-Madinah");
@@ -37,6 +43,11 @@ let s3 = new Student("Ali", 11, school3.name);
 let t1 = new Teacher("Malik Hunain", 35, school1.name);
 let t2 = new Teacher("Laraib", 40, school2.name);
 let t3 = new Teacher("Fiza", 42, school3.name);
+// Add info:
+t1.addInfo("malikhunain@056gmail.com", "123456");
+t2.addInfo("laraib025@gamil.com", "789123");
+t3.addInfo("fiza123@gamil.com", "145891");
+// Add student:
 school1.addStudent(s1);
 school2.addStudent(s2);
 school3.addStudent(s3);
